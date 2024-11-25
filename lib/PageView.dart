@@ -7,11 +7,14 @@ class PageViewDemo extends StatelessWidget {
       appBar: AppBar(
         title: Text('Page View'),
       ),
-      body: PageView(children: [
-        Container(color: Colors.red),
-        Container(color: Colors.green),
-        Container(color: Colors.blue),
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: PageView(children: [
+          Container(color: Colors.red),
+          Container(color: Colors.green),
+          Container(color: Colors.blue),
+        ]),
+      ),
     );
   }
 }

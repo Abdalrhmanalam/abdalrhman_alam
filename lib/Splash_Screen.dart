@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter_application_5/PageView.dart';
+
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -13,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 8),
         () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => HomePage())));
+            MaterialPageRoute(builder: (context) => PageViewDemo())));
   }
 
   @override
@@ -28,16 +30,26 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
-      ),
-      body: Center(
-        child: Text('Welcome to Home Page'),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Home Page'),
+        ),
+        body: Center(
+          child: Text('Welcome to Home Page'),
+        ),
+        onDrawerChanged: (isOpened) {
+          setState(() {
+            PageViewDemo;
+          });
+          Text('asdfa');
+        });
   }
 }
