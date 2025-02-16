@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         home: Maps(),
         //  Task(),
         //  SplashScreen(),
-        // GalleryAccess(),
+          GalleryAccess(),
         // DateTimePicker(),
         // SliderDemo(),
         //PageViewDemo(),
